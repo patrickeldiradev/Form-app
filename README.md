@@ -1,6 +1,6 @@
 
 # PHP Exercise
-PHP Exercise based on Laravel framework.
+PHP Exercise based on Laravel framework .
 
 ## Installation
 **Use this steps for installations**
