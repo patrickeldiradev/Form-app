@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->uuid();
             $table->foreignId('forms_id')->constrained('forms')->cascadeOnDelete();
-            $table->foreignId('parent_id')->nullable()->constrained('form_items')->cascadeOnDelete();
+            $table->uuid('parent_uuid')->nullable()->constrained('form_items')->cascadeOnDelete();
             $table->integer('item_id')->index();
-            $table->integer('item_type')->index();
+            $table->string('item_type')->index();
             $table->string('title');
-            $table->json('params');
             $table->timestamps();
         });
     }
