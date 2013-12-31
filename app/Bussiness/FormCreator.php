@@ -4,6 +4,7 @@ namespace App\Bussiness;
 
 use App\Bussiness\Service\JsonParserService;
 use App\Enum\FormItemTypeEnum;
+use App\Events\FormCreated;
 use App\Factory\FormFactory;
 use App\Repositories\FormItemRepository;
 use App\Repositories\FormRepository;
@@ -63,6 +64,8 @@ class FormCreator
 
             $this->formItemRepository->store($dataTransfer);
         }
+
+        FormCreated::dispatch($createdForm);
     }
 
     /**

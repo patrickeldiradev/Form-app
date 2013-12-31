@@ -8,6 +8,7 @@ use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionnaireRequest;
 use App\Models\Form;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Redis;
 
 /**
  *
@@ -44,7 +45,9 @@ class FormsController extends Controller
      */
     public function getForm(Form $form)
     {
-        return response('getForm');
+        $data = Redis::get($form->uuid);
+
+        return response($data);
     }
 
     /**

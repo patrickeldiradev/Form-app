@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('form_items', function (Blueprint $table) {
+        Schema::create('form_storage', function (Blueprint $table) {
             $table->id();
-            $table->uuid();
             $table->foreignId('form_id')->constrained('forms')->cascadeOnDelete();
-            $table->uuid('parent_uuid')->nullable()->constrained('form_items')->cascadeOnDelete();
-            $table->integer('item_id')->index();
-            $table->string('item_type')->index();
-            $table->string('title');
+            $table->uuid('key');
+            $table->json('data');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_items');
+        Schema::dropIfExists('form_storage');
     }
 };

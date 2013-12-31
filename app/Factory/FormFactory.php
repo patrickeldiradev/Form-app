@@ -3,6 +3,7 @@
 namespace App\Factory;
 
 use App\Bussiness\FormCreator;
+use App\Bussiness\FormPublisher;
 use App\Bussiness\Service\JsonParserService;
 use App\Enum\FormItemTypeEnum;
 use App\Repositories\FormItemRepository;
@@ -24,6 +25,14 @@ class FormFactory
             $this->createFormRepository(),
             $this->createFormItemRepository(),
         );
+    }
+
+    /**
+     * @return FormPublisher
+     */
+    public function createFormPublisher(): FormPublisher
+    {
+        return new FormPublisher();
     }
 
     /**

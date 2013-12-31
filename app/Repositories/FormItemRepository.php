@@ -15,7 +15,7 @@ class FormItemRepository implements RepositoryInterface
     {
         $model = new FormItem();
         $model->uuid = $transfer->getUuid();
-        $model->forms_id = $transfer->getFormId();
+        $model->form_id = $transfer->getFormId();
         $model->item_id = $transfer->getItemId();
         $model->item_type = $transfer->getItemType();
         $model->title = $transfer->getTitle();

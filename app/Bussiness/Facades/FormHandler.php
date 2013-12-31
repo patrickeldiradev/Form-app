@@ -11,6 +11,11 @@ class FormHandler
         return $this->getFormFactory()->createFormCreator()->storeForm($data);
     }
 
+    public function publishForm($form)
+    {
+        return $this->getFormFactory()->createFormPublisher()->publish($form);
+    }
+
     protected function getFormFactory()
     {
         return new FormFactory();
