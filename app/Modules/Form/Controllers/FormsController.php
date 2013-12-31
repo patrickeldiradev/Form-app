@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Modules\Form\Models\Form;
 use App\Modules\Form\Requests\StoreFormRequest;
 use App\Modules\Form\Requests\StoreQuestionnaireRequest;
-use App\Modules\Form\Service\JsonParser;
+use App\Modules\Form\Services\JsonParser;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redis;
 
@@ -24,7 +24,7 @@ class FormsController extends Controller
     public JsonParser $jsonParserService;
 
     /**
-     * @param \App\Modules\Form\Service\JsonParser $jsonParserService
+     * @param \App\Modules\Form\Services\JsonParser $jsonParserService
      */
     public function __construct(JsonParser $jsonParserService)
     {

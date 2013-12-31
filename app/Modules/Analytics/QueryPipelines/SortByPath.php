@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Modules\Analytics\Repositories\QueryPipelines;
+namespace App\Modules\Analytics\QueryPipelines;
 
 use Closure;
+
+use function request;
 
 class SortByPath
 {

@@ -13,9 +13,9 @@ use App\Modules\Form\Repositories\PageRepository;
 use App\Modules\Form\Repositories\QuestionRepository;
 use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Form\Repositories\SectionRepository;
-use App\Modules\Form\Service\FormCreator;
-use App\Modules\Form\Service\FormPublisher;
-use App\Modules\Form\Service\JsonParser;
+use App\Modules\Form\Services\FormCreator;
+use App\Modules\Form\Services\FormPublisher;
+use App\Modules\Form\Services\JsonParser;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
 class FormFactory

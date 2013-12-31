@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Form\Service;
+namespace App\Modules\Form\Services;
 
 use App\Modules\Form\FormFactory;
 

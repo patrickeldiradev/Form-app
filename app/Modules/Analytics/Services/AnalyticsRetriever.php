@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Analytics\Service;
+namespace App\Modules\Analytics\Services;
 
 use App\Modules\Analytics\Repositories\AnalyticsRepository;
 use Illuminate\Support\Collection;

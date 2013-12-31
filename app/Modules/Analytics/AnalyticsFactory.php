@@ -4,7 +4,7 @@ namespace App\Modules\Analytics;
 
 use App\Modules\Analytics\Mapper\RequestLogMapper;
 use App\Modules\Analytics\Repositories\AnalyticsRepository;
-use App\Modules\Analytics\Service\AnalyticsRetriever;
+use App\Modules\Analytics\Services\AnalyticsRetriever;
 
 class AnalyticsFactory
 {
