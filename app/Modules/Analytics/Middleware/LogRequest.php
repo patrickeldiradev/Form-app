@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Modules\Analytics\Middleware;
 
-use App\Models\RequestLog;
+use App\Modules\Analytics\Models\RequestLog;
 use Closure;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class LogRequest
 {

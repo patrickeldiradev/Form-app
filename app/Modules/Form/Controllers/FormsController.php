@@ -1,14 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Form\Controllers;
 
-use App\Modules\Form\Service\JsonParser;
 use App\Facades\FormHandlerFacade;
-use App\Http\Requests\StoreFormRequest;
-use App\Http\Requests\StoreQuestionnaireRequest;
-use App\Models\Form;
+use App\Http\Controllers\Controller;
+use App\Modules\Form\Models\Form;
+use App\Modules\Form\Requests\StoreFormRequest;
+use App\Modules\Form\Requests\StoreQuestionnaireRequest;
+use App\Modules\Form\Service\JsonParser;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redis;
+
+use function response;
 
 /**
  *
@@ -29,7 +32,7 @@ class FormsController extends Controller
     }
 
     /**
-     * @param StoreFormRequest $request
+     * @param \App\Modules\Form\Requests\StoreFormRequest $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
     public function storeForm(StoreFormRequest $request)

@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Events\FormCreated;
-use App\Listeners\PublishDenormalizedForm;
 use App\Listeners\TraceRequest;
+use App\Modules\Form\Events\FormCreated;
+use App\Modules\Form\Listeners\PublishDenormalizedForm;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

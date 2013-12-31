@@ -5,13 +5,13 @@ namespace App\Modules\Shared\Enum;
 class FormItemTypeEnum
 {
     const PAGE = 'page';
-    const PAGE_MODEL = 'App\Models\Page';
+    const PAGE_MODEL = 'App\Modules\Form\Models\Page';
     const SECTION = 'section';
-    const SECTION_MODEL = 'App\Models\Section';
+    const SECTION_MODEL = 'App\Modules\Form\Models\Section';
     const QUESTION = 'question';
-    const QUESTION_MODEL = 'App\Models\Question';
+    const QUESTION_MODEL = 'App\Modules\Form\Models\Question';
     const FORM = 'form';
-    const FORM_MODEL = 'App\Models\Form';
+    const FORM_MODEL = 'App\Modules\Form\Models\Form';
 
     /**
      * @param $type

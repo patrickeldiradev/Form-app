@@ -2,7 +2,7 @@
 
 namespace App\Modules\Form\Repositories;
 
-use App\Models\FormItem;
+use App\Modules\Form\Models\FormItem;
 use Illuminate\Database\Eloquent\Model;
 
 class FormItemRepository implements RepositoryInterface

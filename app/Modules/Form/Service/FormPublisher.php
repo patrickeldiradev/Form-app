@@ -2,14 +2,14 @@
 
 namespace App\Modules\Form\Service;
 
-use App\Models\Form;
-use App\Models\FormStorage;
+use App\Modules\Form\Models\Form;
+use App\Modules\Form\Models\FormStorage;
 use Illuminate\Support\Facades\Redis;
 
 class FormPublisher
 {
     /**
-     * @param Form $form
+     * @param \App\Modules\Form\Models\Form $form
      * @return void
      */
     public function publish(Form $form): void
@@ -32,7 +32,7 @@ class FormPublisher
     /**
      * @param $form
      * @param $denormalizedFormData
-     * @return FormStorage
+     * @return \App\Modules\Form\Models\FormStorage
      */
     protected function storeDenormalizedForm($form, $denormalizedFormData): FormStorage
     {

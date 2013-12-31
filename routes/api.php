@@ -14,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => 'App\Http\Controllers'], function () {
+Route::group(['namespace' => 'App\Modules\Form\Controllers'], function () {
     Route::group(['middleware' => 'log'], function () {
         Route::post('form', 'FormsController@storeForm')->name('form.store');
         Route::get('form/{form:uuid}', 'FormsController@getForm')->name('form.get');
         Route::post('questionnaire', 'FormsController@storeQuestionnaire')->name('form.storeQuestionnaire');
     });
+});
 
+Route::group(['namespace' => 'App\Modules\Analytics\Controllers'], function () {
     Route::get('analytics', 'AnalyticsController@getStatistics')->name('analytics.getStatistics');
 });

@@ -2,7 +2,7 @@
 
 namespace App\Modules\Form\Service;
 
-use App\Events\FormCreated;
+use App\Modules\Form\Events\FormCreated;
 use App\Modules\Form\FormFactory;
 use App\Modules\Form\Repositories\FormItemRepository;
 use App\Modules\Form\Repositories\FormRepository;

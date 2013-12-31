@@ -2,7 +2,7 @@
 
 namespace App\Modules\Form\Repositories;
 
-use App\Models\Question;
+use App\Modules\Form\Models\Question;
 use Illuminate\Database\Eloquent\Model;
 
 class QuestionRepository implements RepositoryInterface

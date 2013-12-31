@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Analytics\Controllers;
 
 use App\Facades\AnalyticsFacadeHandler;
+use App\Http\Controllers\Controller;
 
 class AnalyticsController extends Controller
 {

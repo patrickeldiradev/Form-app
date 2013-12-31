@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Events;
+namespace App\Modules\Form\Events;
 
-use App\Models\Form;
-use Illuminate\Broadcasting\Channel;
+use App\Modules\Form\Models\Form;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 

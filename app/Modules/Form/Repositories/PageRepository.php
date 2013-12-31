@@ -2,7 +2,7 @@
 
 namespace App\Modules\Form\Repositories;
 
-use App\Models\Page;
+use App\Modules\Form\Models\Page;
 use Illuminate\Database\Eloquent\Model;
 
 class PageRepository implements RepositoryInterface

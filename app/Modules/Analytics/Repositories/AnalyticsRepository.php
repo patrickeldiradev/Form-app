@@ -2,8 +2,8 @@
 
 namespace App\Modules\Analytics\Repositories;
 
-use App\Models\RequestLog;
 use App\Modules\Analytics\Mapper\RequestLogMapper;
+use App\Modules\Analytics\Models\RequestLog;
 
 class AnalyticsRepository
 {

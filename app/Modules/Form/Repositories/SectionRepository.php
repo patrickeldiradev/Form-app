@@ -2,7 +2,7 @@
 
 namespace App\Modules\Form\Repositories;
 
-use App\Models\Section;
+use App\Modules\Form\Models\Section;
 use Illuminate\Database\Eloquent\Model;
 
 class SectionRepository implements RepositoryInterface

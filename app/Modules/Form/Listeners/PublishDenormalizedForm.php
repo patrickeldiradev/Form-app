@@ -1,26 +1,16 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Modules\Form\Listeners;
 
 use App\Facades\FormHandlerFacade;
-use App\Events\FormCreated;
+use App\Modules\Form\Events\FormCreated;
 
 class PublishDenormalizedForm
 {
     /**
-     * Create the event listener.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Handle the event.
      *
-     * @param  \App\Events\FormCreated  $event
+     * @param  \App\Modules\Form\Events\FormCreated  $event
      * @return void
      */
     public function handle(FormCreated $event)
