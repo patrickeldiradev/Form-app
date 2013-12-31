@@ -13,7 +13,7 @@ use App\Modules\Form\Repositories\PageRepository;
 use App\Modules\Form\Repositories\QuestionRepository;
 use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Form\Repositories\SectionRepository;
-use App\Modules\Form\Services\FormCreator;
+use App\Modules\Form\Services\FormSaver;
 use App\Modules\Form\Services\FormCreatorInterface;
 use App\Modules\Form\Services\FormPublisher;
 use App\Modules\Form\Services\FormPublisherInterface;
@@ -24,11 +24,11 @@ use App\Modules\Shared\Enum\FormItemTypeEnum;
 class FormFactory
 {
     /**
-     * @return FormCreator
+     * @return FormSaver
      */
     public function createFormCreator(): FormCreatorInterface
     {
-        return new FormCreator(
+        return new FormSaver(
             $this->createJsonParserService(),
             $this->createFormRepository(),
             $this->createFormItemRepository(),
