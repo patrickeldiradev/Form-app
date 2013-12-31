@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
-    Route::post('form', 'FormsController@storeForm');
-    Route::get('form/{form:uuid}', 'FormsController@getForm');
-    Route::post('questionnaire', 'FormsController@storeQuestionnaire');
+    Route::group(['middleware' => 'log'], function () {
+        Route::post('form', 'FormsController@storeForm')->name('form.store');
+        Route::get('form/{form:uuid}', 'FormsController@getForm')->name('form.get');
+        Route::post('questionnaire', 'FormsController@storeQuestionnaire')->name('form.storeQuestionnaire');
+    });
+
+    Route::get('analytics', 'AnalyticsController@getStatistics')->name('analytics.getStatistics');
 });

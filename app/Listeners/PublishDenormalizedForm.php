@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Bussiness\Form\Facades\FormhandlerFacade;
+use App\Facades\FormHandlerFacade;
 use App\Events\FormCreated;
 
 class PublishDenormalizedForm
@@ -25,6 +25,6 @@ class PublishDenormalizedForm
      */
     public function handle(FormCreated $event)
     {
-        FormhandlerFacade::publishForm($event->form);
+        FormHandlerFacade::publishForm($event->form);
     }
 }

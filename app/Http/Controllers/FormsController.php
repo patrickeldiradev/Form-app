@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Bussiness\Form\Facades\FormhandlerFacade;
-use App\Bussiness\Form\Service\JsonParserService;
+use App\Modules\Form\Service\JsonParser;
+use App\Facades\FormHandlerFacade;
 use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionnaireRequest;
 use App\Models\Form;
@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Redis;
 class FormsController extends Controller
 {
     /**
-     * @var JsonParserService
+     * @var JsonParser
      */
-    public JsonParserService $jsonParserService;
+    public JsonParser $jsonParserService;
 
     /**
-     * @param \App\Bussiness\Form\Service\JsonParserService $jsonParserService
+     * @param \App\Modules\Form\Service\JsonParser $jsonParserService
      */
-    public function __construct(JsonParserService $jsonParserService)
+    public function __construct(JsonParser $jsonParserService)
     {
         $this->jsonParserService = $jsonParserService;
     }
@@ -34,7 +34,7 @@ class FormsController extends Controller
      */
     public function storeForm(StoreFormRequest $request)
     {
-        FormhandlerFacade::storeForm($request->input('checklist'));
+        FormHandlerFacade::storeForm($request->input('checklist'));
 
         return response('', Response::HTTP_CREATED);
     }

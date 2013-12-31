@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        App::bind('form-facade', function () {
+            return new \App\Modules\Form\FormFacade();
+        });
+
+        App::bind('analytics-facade', function () {
+            return new \App\Modules\Analytics\AnalyticsFacade();
+        });
     }
 
     /**
