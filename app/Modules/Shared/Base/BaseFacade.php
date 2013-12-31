@@ -20,7 +20,7 @@ class BaseFacade
     /**
      * @return mixed
      */
-    public function resolveFactory()
+    protected function resolveFactory()
     {
         $namespace = (new \ReflectionClass($this))->getNamespaceName();
         $strArray = explode('\\', $namespace, 4);
