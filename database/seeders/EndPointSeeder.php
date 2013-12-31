@@ -29,21 +29,21 @@ class EndPointSeeder extends Seeder
             [
                 ['name'  =>  'form.store'],
                 [
-                    'path'  =>  'form',
+                    'path'  =>  '/form',
                     'method'  =>  'POST',
                 ]
             ],
             [
                 [ 'name'  =>  'form.get'],
                 [
-                    'path'  =>  'form',
+                    'path'  =>  '/form',
                     'method'  =>  'GET',
                 ]
             ],
             [
                 ['name'  =>  'form.storeQuestionnaire'],
                 [
-                    'path'  =>  'questionnaire',
+                    'path'  =>  '/questionnaire',
                     'method'  =>  'POST',
                 ]
             ],

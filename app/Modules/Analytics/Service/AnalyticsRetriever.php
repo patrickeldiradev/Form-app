@@ -3,6 +3,7 @@
 namespace App\Modules\Analytics\Service;
 
 use App\Modules\Analytics\Repositories\AnalyticsRepository;
+use Illuminate\Support\Collection;
 
 class AnalyticsRetriever
 {
@@ -16,7 +17,10 @@ class AnalyticsRetriever
         $this->analyticsRepository = $analyticsRepository;
     }
 
-    public function get()
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function get(): Collection
     {
         return $this->analyticsRepository->getAnalytics();
     }
