@@ -13,7 +13,7 @@ class PublishDenormalizedForm
      * @param  \App\Modules\Form\Events\FormCreated  $event
      * @return void
      */
-    public function handle(FormCreated $event)
+    public function handle($event)
     {
         FormHandlerFacade::publishForm($event->form);
     }

@@ -16,7 +16,16 @@ class FormFacade extends BaseFacade implements FormFacadeInterface
      */
     public function storeForm($data): void
     {
-        $this->getFactory()->createFormCreator()->storeForm($data);
+        $this->getFactory()->createFormSaver()->storeForm($data);
+    }
+
+    /**
+     * @param $data
+     * @return void
+     */
+    public function storeQuestionnaire($data): void
+    {
+        $this->getFactory()->createQuestionnaireSaver()->storeAnswer($data);
     }
 
     /**

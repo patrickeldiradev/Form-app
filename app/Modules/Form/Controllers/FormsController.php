@@ -59,6 +59,8 @@ class FormsController extends Controller
      */
     public function storeQuestionnaire(StoreQuestionnaireRequest $request)
     {
-        return response('storeQuestionnaire');
+        FormHandlerFacade::storeQuestionnaire($request->input('checklist'));
+
+        return response('', Response::HTTP_CREATED);
     }
 }

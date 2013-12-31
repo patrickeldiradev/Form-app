@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Listeners\TraceRequest;
 use App\Modules\Form\Events\FormCreated;
+use App\Modules\Form\Events\QuestionnaireSubmitted;
 use App\Modules\Form\Listeners\PublishDenormalizedForm;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -23,6 +24,9 @@ class EventServiceProvider extends ServiceProvider
         FormCreated::class => [
             PublishDenormalizedForm::class,
         ],
+        QuestionnaireSubmitted::class => [
+            PublishDenormalizedForm::class,
+        ]
     ];
 
     /**

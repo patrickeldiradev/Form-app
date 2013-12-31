@@ -14,7 +14,8 @@ class FormPublisher implements FormPublisherInterface
      */
     public function publish(Form $form): void
     {
-        $form = $form->load(['items.itemDetails', 'items.items']);
+        $form = $form->load(['items.items']);
+
         $denormalizedFormData = $this->denormalizeForm($form);
         $publishedForm = $this->storeDenormalizedForm($form, $denormalizedFormData);
         $this->syncDataInStorage($publishedForm);

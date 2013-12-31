@@ -8,7 +8,7 @@ use App\Modules\Form\Repositories\FormItemRepository;
 use App\Modules\Form\Repositories\FormRepository;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
-interface FormCreatorInterface
+interface FormSaverInterface
 {
     /**
      * @param $data

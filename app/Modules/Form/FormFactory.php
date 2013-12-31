@@ -14,11 +14,13 @@ use App\Modules\Form\Repositories\QuestionRepository;
 use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Form\Repositories\SectionRepository;
 use App\Modules\Form\Services\FormSaver;
-use App\Modules\Form\Services\FormCreatorInterface;
+use App\Modules\Form\Services\FormSaverInterface;
 use App\Modules\Form\Services\FormPublisher;
 use App\Modules\Form\Services\FormPublisherInterface;
 use App\Modules\Form\Services\JsonParser;
 use App\Modules\Form\Services\JsonParserInterface;
+use App\Modules\Form\Services\QuestionnaireSaver;
+use App\Modules\Form\Services\QuestionnaireSaverInterface;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
 class FormFactory
@@ -26,12 +28,23 @@ class FormFactory
     /**
      * @return FormSaver
      */
-    public function createFormCreator(): FormCreatorInterface
+    public function createFormSaver(): FormSaverInterface
     {
         return new FormSaver(
             $this->createJsonParserService(),
             $this->createFormRepository(),
             $this->createFormItemRepository(),
+        );
+    }
+
+    /**
+     * @return QuestionnaireSaverInterface
+     */
+    public function createQuestionnaireSaver(): QuestionnaireSaverInterface
+    {
+        return new QuestionnaireSaver(
+            $this->createJsonParserService(),
+            $this->createQuestionRepository(),
         );
     }
 
@@ -99,5 +112,13 @@ class FormFactory
         }
 
         throw new \Exception('Unsupported Mapper Type.');
+    }
+
+    /**
+     * @return RepositoryInterface
+     */
+    public function createQuestionRepository(): RepositoryInterface
+    {
+        return new QuestionRepository();
     }
 }

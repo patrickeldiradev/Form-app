@@ -7,7 +7,7 @@ use App\Modules\Form\FormFactory;
 use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
-class FormSaver implements FormCreatorInterface
+class FormSaver implements FormSaverInterface
 {
     /**
      * @var JsonParserInterface

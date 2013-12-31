@@ -12,6 +12,12 @@ interface FormFacadeInterface
     public function storeForm($data): void;
 
     /**
+     * @param $data
+     * @return void
+     */
+    public function storeQuestionnaire($data): void;
+
+    /**
      * @param $form
      * @return void
      */
