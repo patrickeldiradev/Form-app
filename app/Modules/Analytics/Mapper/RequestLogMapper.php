@@ -8,6 +8,10 @@ use Illuminate\Support\Collection;
 
 class RequestLogMapper
 {
+    /**
+     * @param Collection $dataCollection
+     * @return Collection
+     */
     public function mapCollection(Collection $dataCollection): Collection
     {
         $dataCollection->transform(function ($item) {
@@ -17,6 +21,10 @@ class RequestLogMapper
         return $dataCollection;
     }
 
+    /**
+     * @param RequestLog $item
+     * @return RequestLogTransfer
+     */
     public function map(RequestLog $item): RequestLogTransfer
     {
         $requestLogTransfer = new RequestLogTransfer();

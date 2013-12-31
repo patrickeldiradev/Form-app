@@ -29,7 +29,7 @@ class FindEndPointAnalyticsRequest extends FormRequest
     public function rules()
     {
         return [
-            'endpoint'  => 'nullable|string|max:130',
+            'endpoint'  => 'nullable|string|max:180',
             'method'  => [
                 'nullable',
                 Rule::in(static::ALLOWED_METHODS),

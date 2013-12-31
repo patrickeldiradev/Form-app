@@ -30,6 +30,9 @@ class AnalyticsFactory
         );
     }
 
+    /**
+     * @return RequestLogMapper
+     */
     public function createRequestLogMapper(): RequestLogMapper
     {
         return new RequestLogMapper();

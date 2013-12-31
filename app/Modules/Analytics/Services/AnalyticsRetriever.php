@@ -8,6 +8,9 @@ use Illuminate\Support\Collection;
 
 class AnalyticsRetriever implements AnalyticsRetrieverInterface
 {
+    /**
+     * @var AnalyticsRepositoryInterface
+     */
     protected AnalyticsRepositoryInterface $analyticsRepository;
 
     /**

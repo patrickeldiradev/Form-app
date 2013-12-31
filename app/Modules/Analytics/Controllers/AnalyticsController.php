@@ -11,6 +11,10 @@ use App\Modules\Analytics\Requests\FindEndPointAnalyticsRequest;
  */
 class AnalyticsController extends Controller
 {
+    /**
+     * @param FindEndPointAnalyticsRequest $request
+     * @return mixed
+     */
     public function getStatistics(FindEndPointAnalyticsRequest $request)
     {
         return AnalyticsFacadeHandler::getAnalytics();
