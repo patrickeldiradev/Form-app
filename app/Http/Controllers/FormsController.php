@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Bussiness\Facades\FormhandlerFacade;
-use App\Bussiness\Service\JsonParserService;
+use App\Bussiness\Form\Facades\FormhandlerFacade;
+use App\Bussiness\Form\Service\JsonParserService;
 use App\Http\Requests\StoreFormRequest;
 use App\Http\Requests\StoreQuestionnaireRequest;
 use App\Models\Form;
@@ -21,7 +21,7 @@ class FormsController extends Controller
     public JsonParserService $jsonParserService;
 
     /**
-     * @param JsonParserService $jsonParserService
+     * @param \App\Bussiness\Form\Service\JsonParserService $jsonParserService
      */
     public function __construct(JsonParserService $jsonParserService)
     {

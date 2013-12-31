@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Bussiness\Service;
+namespace App\Bussiness\Form\Service;
 
 use App\Factory\MapperFactory;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Bussiness;
+namespace App\Bussiness\Form;
 
-use App\Bussiness\Service\JsonParserService;
+use App\Bussiness\Form\Service\JsonParserService;
 use App\Enum\FormItemTypeEnum;
 use App\Events\FormCreated;
 use App\Factory\FormFactory;

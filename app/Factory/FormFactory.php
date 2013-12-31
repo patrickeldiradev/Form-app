@@ -2,9 +2,9 @@
 
 namespace App\Factory;
 
-use App\Bussiness\FormCreator;
-use App\Bussiness\FormPublisher;
-use App\Bussiness\Service\JsonParserService;
+use App\Bussiness\Form\FormCreator;
+use App\Bussiness\Form\FormPublisher;
+use App\Bussiness\Form\Service\JsonParserService;
 use App\Enum\FormItemTypeEnum;
 use App\Repositories\FormItemRepository;
 use App\Repositories\FormRepository;

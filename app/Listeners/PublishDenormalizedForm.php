@@ -2,10 +2,8 @@
 
 namespace App\Listeners;
 
-use App\Bussiness\Facades\FormhandlerFacade;
+use App\Bussiness\Form\Facades\FormhandlerFacade;
 use App\Events\FormCreated;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class PublishDenormalizedForm
 {

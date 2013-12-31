@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Bussiness;
+namespace App\Bussiness\Form;
 
 use App\Models\Form;
 use App\Models\FormStorage;

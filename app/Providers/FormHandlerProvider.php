@@ -15,7 +15,7 @@ class FormHandlerProvider extends ServiceProvider
     public function register()
     {
         App::bind('form-handler', function () {
-            return new \App\Bussiness\Facades\FormHandler();
+            return new \App\Bussiness\Form\Facades\FormHandler();
         });
     }
 
