@@ -10,7 +10,7 @@ class BaseFacade
      */
     public function getFactory(): mixed
     {
-        if(!$this->factory) {
+        if (!$this->factory) {
             $this->factory = $this->resolveFactory();
         }
 

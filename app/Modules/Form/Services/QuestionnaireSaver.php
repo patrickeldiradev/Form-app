@@ -39,7 +39,6 @@ class QuestionnaireSaver implements QuestionnaireSaverInterface
         $parsedData = $this->jsonParserService->parse($data);
 
         foreach ($parsedData['items'] as $dataTransfer) {
-
             if (FormItemTypeEnum::QUESTION == $dataTransfer->getType()) {
                 $form = $this->questionRepository->storeAnswer($dataTransfer);
             }

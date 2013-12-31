@@ -404,5 +404,4 @@ class QuestionTransfer
     {
         $this->answer = $answer;
     }
-
 }
