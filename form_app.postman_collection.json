@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "f995d216-5192-492e-859e-275daaa8baee",
+		"name": "Form App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5971372"
+	},
+	"item": [
+		{
+			"name": "save form",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION=PHPSTORM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"checklist\": {\n        \"checklist_title\": \"Test task form\",\n        \"checklist_description\": \" A form example for the test task\",\n        \"form\": {\n            \"uuid\": \"86d25d21-539a-4472-ac74-823c85eea236\",\n            \"type\": \"form\",\n            \"items\": [\n                {\n                    \"title\": \"Page 1\",\n                    \"uuid\": \"2dd886b4-581f-43bb-addc-e79bd66ce382\",\n                    \"type\": \"page\",\n                    \"items\": [\n                        {\n                            \"uuid\": \"d4f0a2f5-9ff3-40fc-97e0-14d22e52d3c6\",\n                            \"title\": \"question 1\",\n                            \"image_id\": null,\n                            \"type\": \"question\",\n                            \"response_type\": \"list\",\n                            \"required\": false,\n                            \"answer\": \"answer11\",\n                            \"params\": {\n                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                \"multiple_selection\": false\n                            },\n                            \"check_conditions_for\": [],\n                            \"categories\": [],\n                            \"negative\": false,\n                            \"notes_allowed\": true,\n                            \"photos_allowed\": true,\n                            \"issues_allowed\": true,\n                            \"responded\": false\n                        },\n                        {\n                            \"title\": \"section 1\",\n                            \"uuid\": \"b10081c9-c953-4001-9914-e0557e193f29\",\n                            \"type\": \"section\",\n                            \"repeat\": false,\n                            \"weight\": 1,\n                            \"required\": false,\n                            \"items\": [\n                                {\n                                    \"uuid\": \"4a9b3c49-7678-4743-94f3-2d246f59361e\",\n                                    \"title\": \"question 2\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false\n                                },\n                                {\n                                    \"uuid\": \"00331d70-b55a-49ed-b033-bb969c1ab79c\",\n                                    \"title\": \"question 3\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false\n                                },\n                                {\n                                    \"title\": \"section 2\",\n                                    \"uuid\": \"9a228880-5c0a-43b0-bdcd-57e748b197e0\",\n                                    \"type\": \"section\",\n                                    \"repeat\": false,\n                                    \"weight\": 1,\n                                    \"required\": false,\n                                    \"items\": [\n                                        {\n                                            \"uuid\": \"edc5f3e2-d039-47d7-97c7-0b13d92e6926\",\n                                            \"title\": \"question 4\",\n                                            \"image_id\": null,\n                                            \"type\": \"question\",\n                                            \"response_type\": \"list\",\n                                            \"required\": false,\n                                            \"params\": {\n                                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                                \"multiple_selection\": false\n                                            },\n                                            \"check_conditions_for\": [],\n                                            \"categories\": [],\n                                            \"negative\": false,\n                                            \"notes_allowed\": true,\n                                            \"photos_allowed\": true,\n                                            \"issues_allowed\": true,\n                                            \"responded\": false\n                                        }\n                                    ]\n                                }\n                            ]\n                        },\n                        {\n                            \"uuid\": \"9d7f581f-1942-404e-b77e-e9f147d96ff7\",\n                            \"title\": \"question 5\",\n                            \"image_id\": null,\n                            \"type\": \"question\",\n                            \"response_type\": \"list\",\n                            \"required\": false,\n                            \"params\": {\n                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                \"multiple_selection\": false\n                            },\n                            \"check_conditions_for\": [],\n                            \"categories\": [],\n                            \"negative\": false,\n                            \"notes_allowed\": true,\n                            \"photos_allowed\": true,\n                            \"issues_allowed\": true,\n                            \"responded\": false\n                        },\n                        {\n                            \"title\": \"section 3\",\n                            \"uuid\": \"b4695ada-6e05-4425-a361-1133796c165e\",\n                            \"type\": \"section\",\n                            \"repeat\": false,\n                            \"weight\": 1,\n                            \"required\": false,\n                            \"items\": [\n                                {\n                                    \"uuid\": \"19b7e5de-8eda-44ba-a75c-5eadedf9921b\",\n                                    \"title\": \"question 6\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false\n                                }\n                            ]\n                        }\n                    ],\n                    \"params\": {\n                        \"collapsed\": false\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0/api/form",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questionnaire",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION=PHPSTORM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"checklist\": {\n        \"checklist_title\": \"Test task form\",\n        \"checklist_description\": \" A form example for the test task\",\n        \"form\": {\n            \"uuid\": \"86d25d21-539a-4472-ac74-823c85eea236\",\n            \"type\": \"form\",\n            \"items\": [\n                {\n                    \"title\": \"Page 1\",\n                    \"uuid\": \"2dd886b4-581f-43bb-addc-e79bd66ce382\",\n                    \"type\": \"page\",\n                    \"items\": [\n                        {\n                            \"uuid\": \"d4f0a2f5-9ff3-40fc-97e0-14d22e52d3c6\",\n                            \"title\": \"question 1\",\n                            \"image_id\": null,\n                            \"type\": \"question\",\n                            \"response_type\": \"list\",\n                            \"required\": false,\n                            \"params\": {\n                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                \"multiple_selection\": false\n                            },\n                            \"check_conditions_for\": [],\n                            \"categories\": [],\n                            \"negative\": false,\n                            \"notes_allowed\": true,\n                            \"photos_allowed\": true,\n                            \"issues_allowed\": true,\n                            \"responded\": false,\n                            \"answer\": \"hello world\"\n                        },\n                        {\n                            \"title\": \"section 1\",\n                            \"uuid\": \"b10081c9-c953-4001-9914-e0557e193f29\",\n                            \"type\": \"section\",\n                            \"repeat\": false,\n                            \"weight\": 1,\n                            \"required\": false,\n                            \"items\": [\n                                {\n                                    \"uuid\": \"4a9b3c49-7678-4743-94f3-2d246f59361e\",\n                                    \"title\": \"question 2\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false,\n                                    \"answer\": \"hello ertre\"\n                                },\n                                {\n                                    \"uuid\": \"00331d70-b55a-49ed-b033-bb969c1ab79c\",\n                                    \"title\": \"question 3\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false,\n                                    \"answer\": \"hello worddddfdld\"\n                                },\n                                {\n                                    \"title\": \"section 2\",\n                                    \"uuid\": \"9a228880-5c0a-43b0-bdcd-57e748b197e0\",\n                                    \"type\": \"section\",\n                                    \"repeat\": false,\n                                    \"weight\": 1,\n                                    \"required\": false,\n                                    \"items\": [\n                                        {\n                                            \"uuid\": \"edc5f3e2-d039-47d7-97c7-0b13d92e6926\",\n                                            \"title\": \"question 4\",\n                                            \"image_id\": null,\n                                            \"type\": \"question\",\n                                            \"response_type\": \"list\",\n                                            \"required\": false,\n                                            \"params\": {\n                                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                                \"multiple_selection\": false\n                                            },\n                                            \"check_conditions_for\": [],\n                                            \"categories\": [],\n                                            \"negative\": false,\n                                            \"notes_allowed\": true,\n                                            \"photos_allowed\": true,\n                                            \"issues_allowed\": true,\n                                            \"responded\": false,\n                                            \"answer\": \"sdfdsfds world\"\n                                        }\n                                    ]\n                                }\n                            ]\n                        },\n                        {\n                            \"uuid\": \"9d7f581f-1942-404e-b77e-e9f147d96ff7\",\n                            \"title\": \"question 5\",\n                            \"image_id\": null,\n                            \"type\": \"question\",\n                            \"response_type\": \"list\",\n                            \"required\": false,\n                            \"params\": {\n                                \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                \"multiple_selection\": false\n                            },\n                            \"check_conditions_for\": [],\n                            \"categories\": [],\n                            \"negative\": false,\n                            \"notes_allowed\": true,\n                            \"photos_allowed\": true,\n                            \"issues_allowed\": true,\n                            \"responded\": false,\n                            \"answer\": \"fdf worldfffd\"\n                        },\n                        {\n                            \"title\": \"section 3\",\n                            \"uuid\": \"b4695ada-6e05-4425-a361-1133796c165e\",\n                            \"type\": \"section\",\n                            \"repeat\": false,\n                            \"weight\": 1,\n                            \"required\": false,\n                            \"items\": [\n                                {\n                                    \"uuid\": \"19b7e5de-8eda-44ba-a75c-5eadedf9921b\",\n                                    \"title\": \"question 6\",\n                                    \"image_id\": null,\n                                    \"type\": \"question\",\n                                    \"response_type\": \"list\",\n                                    \"required\": false,\n                                    \"params\": {\n                                        \"response_set\": \"1bf277e2-79fc-4d38-81b5-ca3c8ecbbb9d\",\n                                        \"multiple_selection\": false\n                                    },\n                                    \"check_conditions_for\": [],\n                                    \"categories\": [],\n                                    \"negative\": false,\n                                    \"notes_allowed\": true,\n                                    \"photos_allowed\": true,\n                                    \"issues_allowed\": true,\n                                    \"responded\": false,\n                                    \"answer\": \"heldddlo wodfdfdfdrld\"\n                                }\n                            ]\n                        }\n                    ],\n                    \"params\": {\n                        \"collapsed\": false\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0/api/questionnaire",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"questionnaire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analytics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION=PHPSTORM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0/api/analytics",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"analytics"
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "'/form'",
+							"disabled": true
+						},
+						{
+							"key": "method",
+							"value": "GET",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get form",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "XDEBUG_SESSION=PHPSTORM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0/api/form/86d25d21-539a-4472-ac74-823c85eea236",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"path": [
+						"api",
+						"form",
+						"86d25d21-539a-4472-ac74-823c85eea236"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
