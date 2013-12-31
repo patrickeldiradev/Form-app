@@ -30,6 +30,11 @@ class QuestionTransferMapper implements MapperInterFace
         $questionTransfer->setPhotosAllowed($item['photos_allowed']);
         $questionTransfer->setIssuesAllowed($item['issues_allowed']);
         $questionTransfer->setResponded($item['responded']);
+        if (isset($item['answer'])) {
+            $questionTransfer->setAnswer($item['answer']);
+        } else {
+            $questionTransfer->setAnswer(null);
+        }
 
         return $questionTransfer;
     }

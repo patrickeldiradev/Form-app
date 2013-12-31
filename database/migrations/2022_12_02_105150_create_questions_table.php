@@ -27,6 +27,7 @@ return new class extends Migration
             $table->boolean('issues_allowed');
             $table->boolean('responded');
             $table->json('params');
+            $table->string('answer')->nullable();
             $table->timestamps();
         });
     }

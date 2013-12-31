@@ -95,6 +95,11 @@ class QuestionTransfer
     protected bool $responded;
 
     /**
+     * @var string
+     */
+    protected ?string $answer;
+
+    /**
      * @return string|null
      */
     public function getParentUuid(): string|null
@@ -383,4 +388,21 @@ class QuestionTransfer
     {
         $this->responded = $responded;
     }
+
+    /**
+     * @return string
+     */
+    public function getAnswer(): string|null
+    {
+        return $this->answer;
+    }
+
+    /**
+     * @param string $answer
+     */
+    public function setAnswer(?string $answer): void
+    {
+        $this->answer = $answer;
+    }
+
 }

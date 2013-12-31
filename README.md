@@ -37,6 +37,12 @@ DB_PASSWORD=
 $ ./vendor/bin/sail up
  ```
 
+- Run migrations & seeds.
+```bash  
+$ sail artisan migrate
+$ sail artisan db:seed
+ ```
+
 ## Code quality helper commands
 
 - [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer).
