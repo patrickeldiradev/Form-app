@@ -17,6 +17,9 @@ class BaseFacade
         return $this->factory;
     }
 
+    /**
+     * @return mixed
+     */
     public function resolveFactory()
     {
         $namespace = (new \ReflectionClass($this))->getNamespaceName();
