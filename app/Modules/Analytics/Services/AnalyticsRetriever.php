@@ -3,16 +3,17 @@
 namespace App\Modules\Analytics\Services;
 
 use App\Modules\Analytics\Repositories\AnalyticsRepository;
+use App\Modules\Analytics\Repositories\AnalyticsRepositoryInterface;
 use Illuminate\Support\Collection;
 
-class AnalyticsRetriever
+class AnalyticsRetriever implements AnalyticsRetrieverInterface
 {
-    protected AnalyticsRepository $analyticsRepository;
+    protected AnalyticsRepositoryInterface $analyticsRepository;
 
     /**
-     * @param AnalyticsRepository $analyticsRepository
+     * @param AnalyticsRepositoryInterface $analyticsRepository
      */
-    public function __construct(AnalyticsRepository $analyticsRepository)
+    public function __construct(AnalyticsRepositoryInterface $analyticsRepository)
     {
         $this->analyticsRepository = $analyticsRepository;
     }

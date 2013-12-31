@@ -6,7 +6,7 @@ use App\Modules\Form\Models\Form;
 use App\Modules\Form\Models\FormStorage;
 use Illuminate\Support\Facades\Redis;
 
-class FormPublisher
+class FormPublisher implements FormPublisherInterface
 {
     /**
      * @param \App\Modules\Form\Models\Form $form

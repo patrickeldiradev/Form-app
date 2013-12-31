@@ -14,8 +14,11 @@ use App\Modules\Form\Repositories\QuestionRepository;
 use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Form\Repositories\SectionRepository;
 use App\Modules\Form\Services\FormCreator;
+use App\Modules\Form\Services\FormCreatorInterface;
 use App\Modules\Form\Services\FormPublisher;
+use App\Modules\Form\Services\FormPublisherInterface;
 use App\Modules\Form\Services\JsonParser;
+use App\Modules\Form\Services\JsonParserInterface;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
 class FormFactory
@@ -23,7 +26,7 @@ class FormFactory
     /**
      * @return FormCreator
      */
-    public function createFormCreator(): FormCreator
+    public function createFormCreator(): FormCreatorInterface
     {
         return new FormCreator(
             $this->createJsonParserService(),
@@ -33,17 +36,17 @@ class FormFactory
     }
 
     /**
-     * @return FormPublisher
+     * @return FormPublisherInterface
      */
-    public function createFormPublisher(): FormPublisher
+    public function createFormPublisher(): FormPublisherInterface
     {
         return new FormPublisher();
     }
 
     /**
-     * @return JsonParser
+     * @return JsonParserInterface
      */
-    public function createJsonParserService(): JsonParser
+    public function createJsonParserService(): JsonParserInterface
     {
         return new JsonParser($this);
     }

@@ -4,36 +4,36 @@ namespace App\Modules\Form\Services;
 
 use App\Modules\Form\Events\FormCreated;
 use App\Modules\Form\FormFactory;
-use App\Modules\Form\Repositories\FormItemRepository;
+use App\Modules\Form\Repositories\RepositoryInterface;
 use App\Modules\Form\Repositories\FormRepository;
 use App\Modules\Shared\Enum\FormItemTypeEnum;
 
-class FormCreator
+class FormCreator implements FormCreatorInterface
 {
     /**
-     * @var JsonParser
+     * @var JsonParserInterface
      */
-    protected JsonParser $jsonParserService;
+    protected JsonParserInterface $jsonParserService;
 
     /**
-     * @var \App\Modules\Form\Repositories\FormRepository
+     * @var RepositoryInterface
      */
-    protected FormRepository $formRepository;
+    protected RepositoryInterface $formRepository;
 
     /**
-     * @var FormItemRepository
+     * @var RepositoryInterface
      */
-    protected FormItemRepository $formItemRepository;
+    protected RepositoryInterface $formItemRepository;
 
     /**
-     * @param JsonParser $jsonParserService
-     * @param \App\Modules\Form\Repositories\FormRepository $formRepository
-     * @param FormItemRepository $formItemRepository
+     * @param JsonParserInterface $jsonParserService
+     * @param RepositoryInterface $formRepository
+     * @param RepositoryInterface $formItemRepository
      */
     public function __construct(
-        JsonParser $jsonParserService,
-        FormRepository $formRepository,
-        FormItemRepository $formItemRepository
+        JsonParserInterface $jsonParserService,
+        RepositoryInterface $formRepository,
+        RepositoryInterface $formItemRepository
     ) {
         $this->jsonParserService = $jsonParserService;
         $this->formRepository = $formRepository;
@@ -45,7 +45,7 @@ class FormCreator
      * @return void
      * @throws \Exception
      */
-    public function storeForm($data)
+    public function storeForm($data): void
     {
         $parsedData = $this->jsonParserService->parse($data);
         $createdForm = $this->formRepository->store($parsedData['form']);

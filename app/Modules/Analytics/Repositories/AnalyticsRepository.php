@@ -9,7 +9,7 @@ use App\Modules\Analytics\QueryPipelines\SortByPath;
 use Illuminate\Pipeline\Pipeline;
 use Illuminate\Support\Collection;
 
-class AnalyticsRepository
+class AnalyticsRepository implements AnalyticsRepositoryInterface
 {
     protected RequestLogMapper $requestLogMapper;
 

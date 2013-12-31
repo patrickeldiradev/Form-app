@@ -4,7 +4,7 @@ namespace App\Modules\Form\Services;
 
 use App\Modules\Form\FormFactory;
 
-class JsonParser
+class JsonParser implements JsonParserInterface
 {
     protected FormFactory $formFactory;
 
