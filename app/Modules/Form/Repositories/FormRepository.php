@@ -13,12 +13,14 @@ class FormRepository implements RepositoryInterface
      */
     public function store($transfer): Model
     {
-        $model = new Form();
-        $model->uuid = $transfer->getUuid();
-        $model->checklist_title = $transfer->getChecklistTitle();
-        $model->checklist_description = $transfer->getChecklistDescription();
-        $model->type = $transfer->getType();
-        $model->save();
+        $model = Form::updateOrCreate(
+            ['uuid' => $transfer->getUuid()],
+            [
+                'checklist_title' => $transfer->getChecklistTitle(),
+                'checklist_description' => $transfer->getChecklistDescription(),
+                'type' => $transfer->getType(),
+            ]
+        );
 
         return $model;
     }

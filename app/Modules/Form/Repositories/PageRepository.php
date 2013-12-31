@@ -13,10 +13,10 @@ class PageRepository implements RepositoryInterface
      */
     public function store($transfer): Model
     {
-        $model = new Page();
-        $model->uuid = $transfer->getUuid();
-        $model->params = json_encode($transfer->getParams());
-        $model->save();
+        $model = Page::updateOrCreate(
+            ['uuid' => $transfer->getUuid()],
+            ['params' => json_encode($transfer->getParams()),]
+        );
 
         return $model;
     }

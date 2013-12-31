@@ -11,6 +11,15 @@ class FormItem extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'uuid',
+        'form_id',
+        'item_id',
+        'item_type',
+        'title',
+        'parent_uuid',
+    ];
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */

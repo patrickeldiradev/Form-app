@@ -13,21 +13,23 @@ class QuestionRepository implements RepositoryInterface
      */
     public function store($transfer): Model
     {
-        $model = new Question();
-        $model->uuid = $transfer->getUuid();
-        $model->image_id = $transfer->getImageId();
-        $model->required = $transfer->isRequired();
-        $model->response_type = $transfer->getResponseType();
-        $model->check_conditions_for = json_encode($transfer->getCheckConditionsFor());
-        $model->categories = json_encode($transfer->getCategories());
-        $model->negative = $transfer->isNegative();
-        $model->notes_allowed = $transfer->isNotesAllowed();
-        $model->photos_allowed = $transfer->isPhotosAllowed();
-        $model->issues_allowed = $transfer->isIssuesAllowed();
-        $model->responded = $transfer->isResponded();
-        $model->params = json_encode($transfer->getParams());
-        $model->answer = $transfer->getAnswer();
-        $model->save();
+        $model = Question::updateOrCreate(
+            ['uuid' => $transfer->getUuid()],
+            [
+                'image_id' => $transfer->getImageId(),
+                'required' => $transfer->isRequired(),
+                'response_type' => $transfer->getResponseType(),
+                'check_conditions_for' => json_encode($transfer->getCheckConditionsFor()),
+                'categories' => json_encode($transfer->getCategories()),
+                'negative' => $transfer->isNegative(),
+                'notes_allowed' => $transfer->isNotesAllowed(),
+                'photos_allowed' => $transfer->isPhotosAllowed(),
+                'issues_allowed' => $transfer->isIssuesAllowed(),
+                'responded' => $transfer->isResponded(),
+                'params' => json_encode($transfer->getParams()),
+                'answer' => $transfer->getAnswer(),
+            ]
+        );
 
         return $model;
     }
