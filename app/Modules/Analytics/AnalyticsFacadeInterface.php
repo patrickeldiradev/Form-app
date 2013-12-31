@@ -7,7 +7,8 @@ use Illuminate\Support\Collection;
 interface AnalyticsFacadeInterface
 {
     /**
+     * @param array $data
      * @return Collection
      */
-    public function getAnalytics(): Collection;
+    public function getAnalytics(array $data): Collection;
 }

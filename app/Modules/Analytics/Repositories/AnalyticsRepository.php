@@ -22,15 +22,19 @@ class AnalyticsRepository implements AnalyticsRepositoryInterface
     }
 
     /**
-     * @return \Illuminate\Support\Collection
+     * @param array $data
+     * @return Collection
      */
-    public function getAnalytics(): Collection
+    public function getAnalytics(array $data): Collection
     {
+        $endpoint = $data['endpoint'] ?? null;
+        $method = $data['method'] ?? null;
+
         $dataCollection =  app(Pipeline::class)
             ->send(RequestLog::query())
             ->through([
-                SortByPath::class,
-                SortByMethod::class,
+                new SortByPath($endpoint),
+                new SortByMethod($method),
             ])
             ->thenReturn()
             ->get();

@@ -22,10 +22,11 @@ class AnalyticsRetriever implements AnalyticsRetrieverInterface
     }
 
     /**
-     * @return \Illuminate\Support\Collection
+     * @param array $data
+     * @return Collection
      */
-    public function get(): Collection
+    public function get(array $data): Collection
     {
-        return $this->analyticsRepository->getAnalytics();
+        return $this->analyticsRepository->getAnalytics($data);
     }
 }

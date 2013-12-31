@@ -11,12 +11,13 @@ use Illuminate\Support\Collection;
 class AnalyticsFacade extends BaseFacade implements AnalyticsFacadeInterface
 {
     /**
+     * @param array $data
      * @return Collection
      */
-    public function getAnalytics(): Collection
+    public function getAnalytics(array $data): Collection
     {
         return $this->getFactory()
             ->createAnalyticsRetriever()
-            ->get();
+            ->get($data);
     }
 }

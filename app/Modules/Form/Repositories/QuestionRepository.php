@@ -27,7 +27,6 @@ class QuestionRepository implements RepositoryInterface
                 'issues_allowed' => $transfer->isIssuesAllowed(),
                 'responded' => $transfer->isResponded(),
                 'params' => json_encode($transfer->getParams()),
-                'answer' => $transfer->getAnswer(),
             ]
         );
 

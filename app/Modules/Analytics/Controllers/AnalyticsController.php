@@ -18,9 +18,8 @@ class AnalyticsController extends Controller
      */
     public function getStatistics(FindEndPointAnalyticsRequest $request)
     {
-
         return AnalyticsResource::collection(
-            AnalyticsFacadeHandler::getAnalytics()
+            AnalyticsFacadeHandler::getAnalytics($request->validated())
         );
     }
 }

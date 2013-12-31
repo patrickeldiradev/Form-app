@@ -12,7 +12,8 @@ use Illuminate\Support\Collection;
 interface AnalyticsRepositoryInterface
 {
     /**
-     * @return \Illuminate\Support\Collection
+     * @param array $data
+     * @return Collection
      */
-    public function getAnalytics(): Collection;
+    public function getAnalytics(array $data): Collection;
 }

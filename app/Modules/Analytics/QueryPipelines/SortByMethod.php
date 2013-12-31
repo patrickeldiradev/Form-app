@@ -4,10 +4,22 @@ namespace App\Modules\Analytics\QueryPipelines;
 
 use Closure;
 
-use function request;
-
 class SortByMethod
 {
+    /**
+     * @var string
+     */
+    protected ?string $method;
+
+    /**
+     * @param string $method
+     */
+    public function __construct(?string $method)
+    {
+        $this->method = $method;
+    }
+
+
     /**
      * @param $request
      * @param Closure $next
@@ -15,10 +27,10 @@ class SortByMethod
      */
     public function handle($request, Closure $next)
     {
-        if (! request()->has('method')) {
+        if (empty($this->method)) {
             return $next($request);
         }
 
-        return $next($request)->where('method', request()->input('method'));
+        return $next($request)->where('method', $this->method);
     }
 }

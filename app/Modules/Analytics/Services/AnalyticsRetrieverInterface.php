@@ -2,14 +2,13 @@
 
 namespace App\Modules\Analytics\Services;
 
-use App\Modules\Analytics\Repositories\AnalyticsRepository;
-use App\Modules\Analytics\Repositories\AnalyticsRepositoryInterface;
 use Illuminate\Support\Collection;
 
 interface AnalyticsRetrieverInterface
 {
     /**
-     * @return \Illuminate\Support\Collection
+     * @param array $data
+     * @return Collection
      */
-    public function get(): Collection;
+    public function get(array $data): Collection;
 }

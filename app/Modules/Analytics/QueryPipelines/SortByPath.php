@@ -4,10 +4,21 @@ namespace App\Modules\Analytics\QueryPipelines;
 
 use Closure;
 
-use function request;
-
 class SortByPath
 {
+    /**
+     * @var string
+     */
+    protected ?string $path;
+
+    /**
+     * @param string $path
+     */
+    public function __construct(?string $path)
+    {
+        $this->path = $path;
+    }
+
     /**
      * @param $request
      * @param Closure $next
@@ -15,11 +26,11 @@ class SortByPath
      */
     public function handle($request, Closure $next)
     {
-        if (! request()->has('endpoint')) {
+        if (empty($this->path)) {
             return $next($request);
         }
 
-        $param = str_replace("'", "", request()->input('endpoint'));
+        $param = str_replace("'", "", $this->path);
 
         return $next($request)->where('path', $param);
     }
